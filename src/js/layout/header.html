@@ -1,0 +1,62 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="app.home" ng-bind="::$ctrl.appName | lowercase"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" ui-sref="app.home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" ui-sref="app.article">Article</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" ui-sref="app.profile">Profile</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" show-authed="false">
+                <li>
+                    <a ui-sref="app.login"><i class="fa fa-key"></i></a>
+                </li>
+                <li>
+                    <a ui-sref="app.register"><i class="fa fa-pencil"></i></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" show-authed="true">
+                <li>
+                    <a href="#"><i class="fa fa-user"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-question"></i></a>
+                </li>
+                <li uib-dropdown>
+                    <a id="notificationLabel" href="#" uib-dropdown-toggle>
+                        <i class="fa fa-bell"></i><span class="badge">{{ $ctrl.currentUser.notificationsCount }}</span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="notificationLabel">
+                        <li><a href="#">asd</a></li>
+                        <li><a href="#">asd</a></li>
+                        <li><a href="#">asd</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a ui-sref="app.logout"><i class="fa fa-sign-out"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

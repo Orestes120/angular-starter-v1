@@ -1,0 +1,8 @@
+node_modules
+build
+dist
+coverage
+docs
+.idea
+*.log.*
+.jsbeautifyrc

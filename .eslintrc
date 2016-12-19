@@ -1,0 +1,38 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+
+    "env": {
+        "es6": true,
+        "node": true
+    },
+
+    "plugins": [
+        "standard",
+        "promise"
+    ],
+
+    "globals": {
+        "document": false,
+        "navigator": false,
+        "window": false
+    },
+
+    "rules": {
+        "no-console": "warn",
+        "no-unreachable": "warn",
+        "default-case": "warn",
+        "eqeqeq": "warn",
+        "no-alert": "error",
+        "no-case-declarations": "error",
+        "no-multi-spaces": "warn",
+        "comma-spacing": ["warn", { "before": false, "after": true }],
+        "indent": ["warn", 4]
+    }
+}

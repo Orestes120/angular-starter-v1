@@ -5,4 +5,5 @@ coverage
 docs
 .idea
 *.log.*
+npm*.log
 .jsbeautifyrc

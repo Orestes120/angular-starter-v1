@@ -11,7 +11,7 @@
     "test": "gulp test",
     "test:coverage": "npm run test && npm run coverage",
     "test:watch": "karma start",
-    "docs": "jsdoc src/app -r -d docs",
+    "docs": "jsdoc src/js -r -d docs",
     "docs:launch": "npm run docs && live-server --port=3002 --open=docs/",
     "start": "npm run server",
     "api": "node tools/server.js"

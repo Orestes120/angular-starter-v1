@@ -1,3 +1,12 @@
+/**
+ * This is a function to intercept any request to check authorization status.
+ * 
+ * @author: Ariel Cordoba
+ * @param {object} JWT - 
+ * @param {object} AppConstants -
+ * @param {object} $window -
+ * @param {object} $q -
+ */
 function authInterceptor(JWT, AppConstants, $window, $q) {
     'ngInject';
 

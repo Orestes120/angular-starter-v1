@@ -25,18 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // This is where you can add mock resources.
 require('./users')(app, jwt);
-// require('./dashboard')(app);
-// require('./configuration')(app);
-// require('./systemInfo')(app);
-// require('./interfaces')(app);
-// require('./alerts')(app);
-// require('./ports')(app);
-// //require('./portMon')(app);
-
-// This will allow the browser to load static files under "./build"
-//app.use(express.static('ui'));
-
-
+require('./articles')(app);
 
 // This is boilerplate server stuff.
 var server = app.listen(3000, function () {

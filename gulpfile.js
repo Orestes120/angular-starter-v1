@@ -21,9 +21,12 @@ const jsFiles = "src/js/**/*.js";
 const viewFiles = "src/js/**/*.html";
 const styleFiles = "src/style/*.scss";
 
+// Fonts Files
 const fontFiles = ["node_modules/font-awesome/fonts/*",
                    "node_modules/bootstrap/fonts/*"
 ];
+
+// CSSs Files
 const cssFiles = ["node_modules/bootstrap/dist/css/bootstrap.min.css",
                   "node_modules/font-awesome/css/font-awesome.min.css"
 ];
@@ -124,16 +127,7 @@ gulp.task('default', ['lint', 'browserify'], function() {
         notify: false,
         ui: {
             port: 4001
-        },
-        middleware: [
-            {
-                route: "/api",
-                handle: function(req, res, next) {
-                    res.end('\n\nHello, world!\n\n');
-                    return next();
-                }
-            }
-        ]
+        }
     });
 
     gulp.watch("src/index.html", ['html']);
